@@ -17,7 +17,7 @@
                         <div class="mb-3 mt-3">
                             <input type="Turma" class="form-control" id="exampleFormControlInput1" placeholder="Turma">
                         </div>
-                        <a  class="btn btn-custom mt-3">Acessar</a>
+                        <a  href="{{ route('game') }}" class="btn btn-custom mt-3">Acessar</a>
                     </div>
                 </div>
             </div>
