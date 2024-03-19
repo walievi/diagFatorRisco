@@ -26,10 +26,10 @@
     <div class="roulette-container">
         <img class="img-arrow" src="{{ asset('images/arrow.png') }}" alt="Arrow"> <!-- Imagem da seta no centro -->
         <div class="roulette">
-            <div class="option"><img class="img-opt" src="{{ asset('images/opt-1.png') }}" alt="opção 1"></div>
-            <div class="option"><img class="img-opt" src="{{ asset('images/opt-2.png') }}" alt="opção 2"></div>
-            <div class="option"><img class="img-opt" src="{{ asset('images/opt-3.png') }}" alt="opção 3"></div>
-            <div class="option"><img class="img-opt" src="{{ asset('images/opt-4.png') }}" alt="opção 4"></div>
+            <div class="option"><img class="img-opt" src="{{ asset('images/op-1.png') }}" alt="opção 1"></div>
+            <div class="option"><img class="img-opt" src="{{ asset('images/op-2.png') }}" alt="opção 2"></div>
+            <div class="option"><img class="img-opt" src="{{ asset('images/op-3.png') }}" alt="opção 3"></div>
+            <div class="option"><img class="img-opt" src="{{ asset('images/op-4.png') }}" alt="opção 4"></div>
            
         </div>
     </div>
