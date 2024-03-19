@@ -21,28 +21,7 @@
             </div>
         </div>
     </div> -->
-
-    <!-- <div class="roulette-container">
-        <div class="roulette">
-            @foreach($options as $index => $option)
-                @php
-                    $angle = ($index * (360/count($options))) * (pi() / 180);
-                    $x = 200 + 150 * cos($angle);
-                    $y = 200 + 150 * sin($angle);
-                @endphp
-                <div class="option" style="left: {{$x}}px; top: {{$y}}px;">{{ $option }}</div>
-            @endforeach
-        </div>
-    </div>
-    <button id="spin-btn">Spin</button>
-    
-    <script>
-        document.getElementById('spin-btn').addEventListener('click', function() {
-            var degrees = Math.floor(Math.random() * 3600) + 360;
-            var roulette = document.querySelector('.roulette');
-            roulette.style.transform = 'rotate(' + degrees + 'deg)';
-        });
-    </script> -->
+    <h1 class="text-center mt-5" style="color: white">Gire a roleta e descubra qual o tema da pergunta!</h1>
 
     <div class="roulette-container">
         <img class="img-arrow" src="{{ asset('images/arrow.png') }}" alt="Arrow"> <!-- Imagem da seta no centro -->
