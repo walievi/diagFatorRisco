@@ -72,6 +72,7 @@
 
         function tocarSomRoleta() {
             if (roletaAudio.paused) {
+                roletaAudio.currentTime = 0;
                 roletaAudio.play();
             }
         }
