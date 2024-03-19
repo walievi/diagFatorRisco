@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers;
 
 use App\Http\Controllers\GameController;
+use App\Http\Controllers\Auth\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,11 @@ use App\Http\Controllers\GameController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth/login');
+});
+
+Route::get('/register', function () {
+    return view('auth/register');
 });
 
 Route::get('/game', [Controllers\GameController::class, 'index'])->name('game');
