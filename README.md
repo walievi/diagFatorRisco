@@ -22,6 +22,9 @@
 1. php artisan make:migration add_role_to_users_table
 2. php artisan migrate
 
+## Rollback na migrate
+php artisan migate:rollback
+
 ## Criar model
 1. php artisan make:model Post
 
