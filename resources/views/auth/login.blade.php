@@ -73,6 +73,12 @@
                                 </div>
                             </center>
                         </div>
+
+                        <div>
+                            <center>
+                                <a href="{{ route('register') }}" class="btn btn-link">Não tem uma conta? Cadastre-se</a>
+                            </center>
+                        </div>
                     </form>
                     </div>
                 </div>

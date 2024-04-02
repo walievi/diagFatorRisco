@@ -45,7 +45,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-custom" data-bs-dismiss="modal">Enviar</button>
+                    <button class="btn btn-custom" data-bs-dismiss="pergunta">Enviar</button>
                 </div>
             </div>
         </div>

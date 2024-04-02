@@ -132,6 +132,12 @@ h2 {
     padding: 2rem;
 }
 
+.btn-link {
+    color: black;
+    text-decoration: none;
+
+}
+
 /* Roleta */
 
 .img-arrow {
