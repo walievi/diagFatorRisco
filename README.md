@@ -17,13 +17,17 @@
 1. Sem actions: php artisan make:controller AutenticacaoController
 2. CRUD: php artisan make:controller AutenticacaoController –resources
 
+# convenções de tabelas
+1. nome das tabelas no plural
+2. ex nome: create_teste_table
 
 ## Adicionar campo 'role' na tabela usuários
 1. php artisan make:migration add_role_to_users_table
 2. php artisan migrate
 
 ## Rollback na migrate
-php artisan migate:rollback
+1. php artisan migate:rollback
+2. php artisan migate:rollback --step=2
 
 ## Criar model
 1. php artisan make:model Post
