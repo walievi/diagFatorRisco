@@ -29,3 +29,13 @@ Route::get('/game', [Controllers\GameController::class, 'index'])->name('game');
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+// Route::resource('teste', Controllers\TesteController::class);
+
+
+
+// Route::get('/teste', [Controllers\TesteController::class, 'index'])->name('teste.index');
+// Route::get('/teste/{teste}', [Controllers\TesteController::class, 'show'])->name('teste.show');
+Route::get('/teste/{teste}/edit', [Controllers\TesteController::class, 'edit'])->name('teste.edit');
+Route::put('/teste/{teste}/update', [Controllers\TesteController::class, 'update'])->name('teste.update');
