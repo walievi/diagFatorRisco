@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class AskController extends Controller
+class QuestionController extends Controller
 {
     public function index() {
-        return view('asks.index');
+        return view('question.index');
     }
 }

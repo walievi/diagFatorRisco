@@ -5,7 +5,7 @@ use App\Http\Controllers;
 
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\Auth\RegisterController;
-use App\Http\Controllers\AskController;
+use App\Http\Controllers\QuestionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,7 +31,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/ask', [App\Http\Controllers\AskController::class, 'index'])->name('ask');
+Route::get('/question', [App\Http\Controllers\QuestionController::class, 'index'])->name('question');
 
 // Route::resource('teste', Controllers\TesteController::class);
 
