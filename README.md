@@ -39,3 +39,21 @@
 
 ## link cidades e estados sql
 https://zerobugs.com.br/ver-post/codigo-sql-com-todas-as-cidades-e-estados-do-brasil-62/
+
+## Anotações paginação perguntas a ser desenvolvida
+
+1.Rota
+    `Route::name('pergunta.salvar')->post('salvar/{pergunta}', [ControllerController::class, 'salvar']);`  
+
+
+2. Controller
+    `public function salvar(Request $request, Pergunta $pergunta)`
+    `{`
+        `//salva`
+        `return redirect()->route('pergunta.view', ['pergunta' => $pergunta->proximaPerguntaID]);`
+    `}`
+
+3. View
+    `<form method="POST" action="{{ route('pergunta.salvar', ['pergunta' => $pergunta->id]) }}">`
+        `@csrf`
+    `</form>`
