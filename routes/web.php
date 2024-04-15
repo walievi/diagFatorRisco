@@ -6,6 +6,7 @@ use App\Http\Controllers;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\QuestionController;
+use App\Http\Controllers\QuestionnaireController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,5 +35,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/question', [App\Http\Controllers\QuestionController::class, 'index'])->name('question');
 
 Route::name('question.save')->post('/{question}', [QuestionController::class, 'save']);
+
+Route::get('/questionnaire', [App\Http\Controllers\QuestionnaireController::class, 'index'])->name('questionnaire');
+
 
 

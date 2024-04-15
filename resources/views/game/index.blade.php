@@ -81,7 +81,7 @@
         function pararSomRoleta() {
             roletaAudio.pause();
             var minhaModal = new bootstrap.Modal(document.getElementById('pergunta'));
-            minhaModal.show();
+            window.location.href = '/question';
         }
     </script>
     

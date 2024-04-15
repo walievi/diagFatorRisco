@@ -5,11 +5,12 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8 mt-5">
-            <form method="POST" action="{{ route('question.save', ['question' => $question->id]) }}">
+            {{-- <form method="POST" action="{{ route('question.save', ['question' => $question->id]) }}"> --}}
+            <form method="POST" >
                 @csrf
                 <div class="card">
                     <div class="card-body">
-                        <div class="row mb-3">
+                        <div class="mb-3">
                             <h4>Pergunta 1</h4>
                         </div>
 
