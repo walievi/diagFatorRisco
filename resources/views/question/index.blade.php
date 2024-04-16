@@ -4,8 +4,8 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8 mt-3">
-            <div class="card">
+        <div class="col-md-8 mt-3 mb-5">
+            <div class="card centralizar p-5">
                 <form id="questionForm" method="POST" action="{{ route('question.save', ['question' => 1]) }}">
                 @csrf
                     <div class="card-body">
@@ -18,8 +18,8 @@
                         </div>
 
                         <!-- validar se possui imagem -->
-                        <div> 
-                            <img src="https://s2-g1.glbimg.com/aNpAYDaD6Q_-cciSMaHnsPWcYns=/0x0:800x450/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2022/1/A/Ob6AaqSGOqUjsuVchzSQ/harry-potter-and-the-chamber-of-secrets-photo1.jpg" class="card-img-top" alt="...">
+                        <div class="centralizar"> 
+                            <img src="https://s2-g1.glbimg.com/aNpAYDaD6Q_-cciSMaHnsPWcYns=/0x0:800x450/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2022/1/A/Ob6AaqSGOqUjsuVchzSQ/harry-potter-and-the-chamber-of-secrets-photo1.jpg" class="card-img-top img-question" alt="...">
                         </div>
 
                         <!-- validar se possui vídeo e necessário copiar aquele incorporar para apresentar o vídeo -->
@@ -39,7 +39,7 @@
                         </div>
                         
 
-                        <div class="modal-footer centralizar mt-5">
+                        <div class="centralizar mt-3">
                             <button type="submit" class="btn btn-custom" data-bs-dismiss="pergunta">Enviar resposta</button>
                         </div>
                     </div>

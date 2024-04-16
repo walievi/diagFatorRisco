@@ -27,9 +27,7 @@
 .card-custom {
 	border-radius: 5px;
     box-shadow: 0px 30px 40px -20px var(--grayishBlue);
-    padding: 30px;
-    margin: 20px;
-    align-items: center;
+    padding: 20px;
 }
 
 .card-custom-questionnaire {
@@ -105,6 +103,12 @@ h2 {
 .centralizar {
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.img-question {
+    max-width: 80%;
+    height: auto;
     align-items: center;
 }
 
