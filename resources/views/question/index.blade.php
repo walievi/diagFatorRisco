@@ -4,7 +4,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-10 mt-5">
+        <div class="col-md-8 mt-3">
             <div class="card">
                 <form method="POST" action="{{ route('question.save', ['question' => 1]) }}">
                 @csrf
@@ -29,13 +29,13 @@
 
                         <div class="btn-group-vertical mt-5 centralizar" role="group" aria-label="Vertical radio toggle button group">
                             <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
-                            <label class="btn btn-outline-info" for="vbtn-radio1">A - "O que aconteceu? Posso ajudar de alguma forma?"</label>
+                            <label class="btn btn-outline-info mb-3" for="vbtn-radio1">A - "O que aconteceu? Posso ajudar de alguma forma?"</label>
 
                             <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
-                            <label class="btn btn-outline-info" for="vbtn-radio2">B - "Sorrir e acenar."</label>
+                            <label class="btn btn-outline-info mb-3" for="vbtn-radio2">B - "Sorrir e acenar."</label>
                             
                             <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off">
-                            <label class="btn btn-outline-info" for="vbtn-radio3">C - "Continuar explorando sem se preocupar com o elfo."</label>
+                            <label class="btn btn-outline-info mb-3" for="vbtn-radio3">C - "Continuar explorando sem se preocupar com o elfo."</label>
                         </div>
 
                         <div class="modal-footer centralizar mt-5">

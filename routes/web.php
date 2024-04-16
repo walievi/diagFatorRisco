@@ -34,11 +34,14 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 // Route::get('/question', [App\Http\Controllers\QuestionController::class, 'index'])->name('question');
 
-Route::name('question')->get('/question/{question}', [QuestionController::class, 'index']);
+// Route::name('/question')->get('/question/{question}', [QuestionController::class, 'index']);
+Route::get('/question/{question}', [App\Http\Controllers\QuestionController::class, 'index'])->name('question');
 
 Route::name('question.save')->post('/question/{question}/save', [QuestionController::class, 'save']);
 
 Route::get('/questionnaire', [App\Http\Controllers\QuestionnaireController::class, 'index'])->name('questionnaire');
+
+
 
 
 
