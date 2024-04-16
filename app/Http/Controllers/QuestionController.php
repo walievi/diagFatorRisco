@@ -8,7 +8,7 @@ use App\Models\Question;
 
 class QuestionController extends Controller
 {
-    public function index() {
+    public function index($question) {
         return view('question.index');
     }
 

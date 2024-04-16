@@ -16,8 +16,6 @@ Route::get('/', function () { return view('auth/login');});
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/game', [Controllers\GameController::class, 'index'])->name('game');
 
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
     Route::get('/question/{question}', [App\Http\Controllers\QuestionController::class, 'index'])->name('question');
 
     Route::name('question.save')->post('/question/{question}/save', [QuestionController::class, 'save']);
