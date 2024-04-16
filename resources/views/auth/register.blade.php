@@ -6,7 +6,7 @@
 <div class="container">
     <div class="row">
         <div class="row justify-content-center mt-5">
-            <div class="col-md-4">
+            <div class="col-md-5">
                 <div class="card card-custom">
                     <div class="card-body card-body-home card-text text-center " style="margin: 0 auto">
                         <img class="logo" src="{{ asset('images/logo.png') }}" alt="árvore lúdica e colorida">

@@ -50,13 +50,10 @@
 </div>
 
 <script>
-    // Adiciona um evento de clique em cada botão de rádio
     var radioButtons = document.querySelectorAll('.btn-check');
     radioButtons.forEach(function(button) {
         button.addEventListener('click', function() {
-            // Verifica se o botão está selecionado
             if (this.checked) {
-                // Captura o texto da label associada ao botão
                 var labelText = document.querySelector('label[for="' + this.id + '"]').innerText;
                 console.log("Valor selecionado:", labelText);
             }

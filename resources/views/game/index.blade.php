@@ -2,7 +2,6 @@
 @extends('general')
 
 @section('content')
-
 <div class="container">
     <h1 class="text-center mt-5" style="color: white">Gire a roleta e descubra qual o tema da pergunta!</h1>
 
@@ -26,22 +25,7 @@
     </div>
 </div>
 
-<script>
-    // document.getElementById('spin-btn').addEventListener('click', function() {
-    //     tocarSomRoleta();
-
-    //     var degrees = Math.floor(Math.random() * 3600) + 360;
-    //     var roulette = document.querySelector('.roulette');
-    //     roulette.style.transition = "transform 5s ease-out"; 
-    //     roulette.style.transform = 'rotate(' + degrees + 'deg)';
-
-    //     var duracaoGiro = 5000 + degrees / 10; 
-    //     setTimeout(function() {
-    //         pararSomRoleta();
-    //     }, duracaoGiro);
-    // });
-
-    
+<script>   
     document.getElementById('spin-btn').addEventListener('click', function() {
         tocarSomRoleta();
 
@@ -83,11 +67,8 @@
         }
     }
 
-
     function pararSomRoleta() {
         roletaAudio.pause();
         window.location.href = '/question/1';
     }
-    
-
 </script>

@@ -19,8 +19,8 @@
             <div class="card card-custom-questionnaire">
                 <div class="card-body">
                     <h5 class="card-title">Questionário Harry Potter</h5>
-                    <p class="card-text">Esse questionário é sobre o filme Harry Potter e a Câmara Secreta.</p>
-                    <a href="{{ route('question', ['question' => 1]) }}" class="btn btn-custom">Iniciar</a>
+                    <p class="card-text">Esse questionário é sobre o filme Harry Potter e a Câmara Secreta com roleta.</p>
+                    <a href="{{ route('game') }}" class="btn btn-custom">Iniciar</a>
                 </div>
             </div>
         </div>
