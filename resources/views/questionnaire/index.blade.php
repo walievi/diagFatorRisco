@@ -8,12 +8,14 @@
     <h3 class="text-center mt-5" style="color: white">Escolha um dos questionários abaixo para começar</h3>
 
     <div class="row justify-content-center mt-5">
-        <div class="col-md-4">
+        <div class="col-md-6">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Questionário Harry Potter</h5>
                     <p class="card-text">Esse questionário é sobre o filme Harry Potter e a Câmara Secreta.</p>
+                    
                     <a href="{{ route('question', ['question' => 1]) }}" class="btn btn-custom">Iniciar</a>
+
                 </div>
             </div>
         </div>

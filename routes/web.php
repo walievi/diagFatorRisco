@@ -14,7 +14,7 @@ use App\Http\Controllers\QuestionnaireController;
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
+| routes are loaded by the RouteServiceProvider and all of them will=
 | be assigned to the "web" middleware group. Make something great!
 |
 */
@@ -32,9 +32,11 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/question', [App\Http\Controllers\QuestionController::class, 'index'])->name('question');
+// Route::get('/question', [App\Http\Controllers\QuestionController::class, 'index'])->name('question');
 
-Route::name('question.save')->post('/{question}', [QuestionController::class, 'save']);
+Route::name('question')->get('/question/{question}', [QuestionController::class, 'index']);
+
+Route::name('question.save')->post('/question/{question}/save', [QuestionController::class, 'save']);
 
 Route::get('/questionnaire', [App\Http\Controllers\QuestionnaireController::class, 'index'])->name('questionnaire');
 
