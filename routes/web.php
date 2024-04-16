@@ -7,6 +7,7 @@ use App\Http\Controllers\GameController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\QuestionnaireController;
+use App\Http\Controllers\Auth\ResetPasswordController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,10 @@ Route::get('/', function () {
 
 Route::get('/register', function () {
     return view('auth/register');
+});
+
+Route::get('/password/reset', function () {
+    return view('auth/passwords/reset');
 });
 
 Route::get('/game', [Controllers\GameController::class, 'index'])->name('game');

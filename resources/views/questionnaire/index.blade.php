@@ -9,7 +9,7 @@
 
     <div class="row justify-content-center mt-5">
         <div class="col-md-5">
-            <div class="card card-custom">
+            <div class="card card-custom-questionnaire">
                 <div class="card-body">
                     <h5 class="card-title">Questionário Harry Potter</h5>
                     <p class="card-text">Esse questionário é sobre o filme Harry Potter e a Câmara Secreta.</p>
@@ -20,7 +20,7 @@
             </div>
         </div>
         <div class="col-md-5">
-            <div class="card card-custom">
+            <div class="card card-custom-questionnaire">
                 <div class="card-body">
                     <h5 class="card-title">Questionário Harry Potter</h5>
                     <p class="card-text">Esse questionário é sobre o filme Harry Potter e a Câmara Secreta.</p>

@@ -30,10 +30,18 @@
     padding: 30px;
     margin: 20px;
     align-items: center;
+}
+
+.card-custom-questionnaire {
+	border-radius: 5px;
+    box-shadow: 0px 30px 40px -20px var(--grayishBlue);
+    padding: 30px;
+    margin: 20px;
+    align-items: center;
     transition: all 0.5s;
 }
 
-.card-custom:hover {
+.card-custom-questionnaire:hover {
     -webkit-transform: scale(1.05);
     transform: scale(1.05);
 	border-radius: 5px;
