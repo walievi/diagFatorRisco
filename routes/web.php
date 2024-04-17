@@ -20,7 +20,7 @@ use App\Http\Controllers\QuestionController;
 
 Route::get('/', function () {
     return view('auth/login');
-});
+})->name('login');
 
 Route::get('/register', function () {
     return view('auth/register');
@@ -35,4 +35,4 @@ Route::get('/question', [App\Http\Controllers\QuestionController::class, 'index'
 
 Route::name('question.save')->post('/{question}', [QuestionController::class, 'save']);
 
-
+Route::post('/logout', [Controllers\LogoutController::class, 'index'])->name('logout');
