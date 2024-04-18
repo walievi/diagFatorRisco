@@ -8,8 +8,9 @@ use App\Models\Question;
 
 class QuestionController extends Controller
 {
-    public function index($question) {
-        return view('question.index');
+    public function index(Question $question) {
+        return view('question.index')
+                ->with('question', $question);
     }
 
     public function save(Request $request, Question $question) {
