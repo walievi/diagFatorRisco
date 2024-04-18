@@ -1,7 +1,5 @@
-@extends('layouts.app')
-@extends('general')
-
-@section('content')
+@extends('layouts.logged')
+@section('page')
 <div class="container">
     <h1 class="text-center mt-5" style="color: white">Gire a roleta e descubra qual o tema da pergunta!</h1>
 
@@ -72,3 +70,6 @@
         window.location.href = '/question/1';
     }
 </script>
+    
+</div>
+@endsection

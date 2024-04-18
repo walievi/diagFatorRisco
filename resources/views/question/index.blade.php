@@ -1,7 +1,6 @@
-@extends('layouts.app')
-@extends('general')
+@extends('layouts.logged')
 
-@section('content')
+@section('page')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8 mt-3 mb-5">
@@ -60,7 +59,4 @@
         });
     });
 </script>
-
-
-
-
+@endsection
