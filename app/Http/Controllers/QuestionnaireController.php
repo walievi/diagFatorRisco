@@ -4,12 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Question;
 
-class QuestionController extends Controller
+class QuestionnaireController extends Controller
 {
-    public function index($question) {
-        return view('question.index');
+    public function index() {
+        return view('questionnaire.index');
     }
 
     public function save(Request $request, Question $question) {

@@ -1,15 +1,14 @@
 @extends('layouts.logged')
 
-
 @section('page')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8 mt-5">
-            <form method="POST" action="{{ route('question.save', ['question' => $question->id]) }}">
+        <div class="col-md-8 mt-3 mb-5">
+            <div class="card centralizar p-5">
+                <form id="questionForm" method="POST" action="{{ route('question.save', ['question' => 1]) }}">
                 @csrf
-                <div class="card">
                     <div class="card-body">
-                        <div class="row mb-3">
+                        <div class="mb-3">
                             <h4>Pergunta 1</h4>
                         </div>
 
@@ -18,8 +17,8 @@
                         </div>
 
                         <!-- validar se possui imagem -->
-                        <div> 
-                            <img src="https://s2-g1.glbimg.com/aNpAYDaD6Q_-cciSMaHnsPWcYns=/0x0:800x450/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2022/1/A/Ob6AaqSGOqUjsuVchzSQ/harry-potter-and-the-chamber-of-secrets-photo1.jpg" class="card-img-top" alt="...">
+                        <div class="centralizar"> 
+                            <img src="https://s2-g1.glbimg.com/aNpAYDaD6Q_-cciSMaHnsPWcYns=/0x0:800x450/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2022/1/A/Ob6AaqSGOqUjsuVchzSQ/harry-potter-and-the-chamber-of-secrets-photo1.jpg" class="card-img-top img-question" alt="...">
                         </div>
 
                         <!-- validar se possui vídeo e necessário copiar aquele incorporar para apresentar o vídeo -->
@@ -29,25 +28,35 @@
 
                         <div class="btn-group-vertical mt-5 centralizar" role="group" aria-label="Vertical radio toggle button group">
                             <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
-                            <label class="btn btn-outline-info" for="vbtn-radio1">A - "O que aconteceu? Posso ajudar de alguma forma?"</label>
-
+                            <label class="btn btn-outline-info mb-3" for="vbtn-radio1">A - "O que aconteceu? Posso ajudar de alguma forma?"</label>
+                        
                             <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
-                            <label class="btn btn-outline-info" for="vbtn-radio2">B - "Sorrir e acenar."</label>
+                            <label class="btn btn-outline-info mb-3" for="vbtn-radio2">B - "Sorrir e acenar."</label>
                             
                             <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off">
-                            <label class="btn btn-outline-info" for="vbtn-radio3">C - "Continuar explorando sem se preocupar com o elfo."</label>
+                            <label class="btn btn-outline-info mb-3" for="vbtn-radio3">C - "Continuar explorando sem se preocupar com o elfo."</label>
                         </div>
+                        
 
-                        <div class="modal-footer centralizar mt-5">
-                            <button class="btn btn-custom" data-bs-dismiss="pergunta">Enviar resposta</button>
+                        <div class="centralizar mt-3">
+                            <button type="submit" class="btn btn-custom" data-bs-dismiss="pergunta">Enviar resposta</button>
                         </div>
                     </div>
-                </div>
-            </form>
+                </form> 
+            </div>
         </div>
     </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
-
+<script>
+    var radioButtons = document.querySelectorAll('.btn-check');
+    radioButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            if (this.checked) {
+                var labelText = document.querySelector('label[for="' + this.id + '"]').innerText;
+                console.log("Valor selecionado:", labelText);
+            }
+        });
+    });
+</script>
 @endsection
