@@ -1,9 +1,6 @@
-@extends('layouts.app')
-@extends('general')
+@extends('layouts.logged')
 
-@include('layouts.navbar')
-
-@section('content')
+@section('page')
 
 <div class="container">
     <h1 class="text-center mt-5" style="color: white">Gire a roleta e descubra qual o tema da pergunta!</h1>
@@ -88,3 +85,5 @@
     </script>
     
 </div>
+
+@endsection

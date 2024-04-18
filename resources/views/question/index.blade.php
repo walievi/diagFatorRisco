@@ -1,7 +1,7 @@
-@extends('layouts.app')
-@extends('general')
-@section('content')
+@extends('layouts.logged')
 
+
+@section('page')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8 mt-5">
@@ -50,3 +50,4 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
 
+@endsection
