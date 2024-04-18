@@ -9,7 +9,20 @@ use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\QuestionnaireController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 
-Auth::routes();
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider and all of them will
+| be assigned to the "web" middleware group. Make something great!
+|
+*/
+
+Route::get('/', function () {
+    return view('auth/login');
+})->name('login');
 
 Route::get('/', function () { return view('auth/login');});
 
@@ -26,4 +39,4 @@ Route::group(['middleware' => 'auth'], function () {
 
 
 
-
+Route::post('/logout', [Controllers\LogoutController::class, 'index'])->name('logout');
