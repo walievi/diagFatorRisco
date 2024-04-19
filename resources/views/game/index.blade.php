@@ -47,6 +47,7 @@
             var selectedOption = options[selectedOptionIndex];
             var selectedOptionAlt = selectedOption.querySelector('.img-opt').alt;
             console.log("Opção selecionada:", selectedOptionAlt);
+            alert('Opção selecionada: ' + selectedOptionAlt);
         });
 
         var duracaoGiro = 5000 + degrees / 10; 

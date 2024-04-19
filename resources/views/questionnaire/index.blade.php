@@ -1,7 +1,6 @@
-@extends('layouts.app')
-@extends('general')
+@extends('layouts.logged')
 
-@section('content')
+@section('page')
 <div class="container">
     <h1 class="text-center mt-5" style="color: white">Olá, bem-vindo(a) ao Rainbow Minds</h1>
     <h3 class="text-center mt-5" style="color: white">Escolha um dos questionários abaixo para começar</h3>
@@ -26,3 +25,4 @@
         </div>
     </div>    
 </div>
+@endsection

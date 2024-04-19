@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+<nav class="navbar navbar-light bg-transparent">
     <div class="container-fluid">
         <div class="w-75"></div>
         <div class="w-25 d-flex justify-content-end">

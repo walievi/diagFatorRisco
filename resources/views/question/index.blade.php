@@ -49,14 +49,25 @@
 </div>
 
 <script>
+    var selectedValue = ''; // Variável para armazenar o valor selecionado
+
     var radioButtons = document.querySelectorAll('.btn-check');
     radioButtons.forEach(function(button) {
         button.addEventListener('click', function() {
             if (this.checked) {
                 var labelText = document.querySelector('label[for="' + this.id + '"]').innerText;
                 console.log("Valor selecionado:", labelText);
+                selectedValue = labelText; // Armazena o valor selecionado na variável
             }
         });
     });
+
+    document.getElementById('questionForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Impede o envio padrão do formulário
+        
+        // Exibe um alerta com o valor selecionado
+        alert('Resposta recebida: ' + selectedValue);
+    });
 </script>
+
 @endsection

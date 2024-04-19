@@ -117,6 +117,10 @@ h2 {
     border-radius: 20px;
 }
 
+.btn-danger {
+    z-index: 999;
+}
+
 .btn-option {
     background-color: #f5a511;
     color: white;
