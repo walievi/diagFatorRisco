@@ -24,6 +24,12 @@ Route::get('/', function () {
     return view('auth/login');
 })->name('login');
 
+Route::get('/register', function () {
+    return view('auth/register');
+})->name('register');
+
+Auth::routes();
+
 Route::get('/', function () { return view('auth/login');});
 
 Route::group(['middleware' => 'auth'], function () {
@@ -40,3 +46,5 @@ Route::group(['middleware' => 'auth'], function () {
 
 
 Route::post('/logout', [Controllers\LogoutController::class, 'index'])->name('logout');
+
+
