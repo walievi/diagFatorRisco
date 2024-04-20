@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('general')
 @section('content')
     @include('layouts.navbar')
     @yield('page', '')

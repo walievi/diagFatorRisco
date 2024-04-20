@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Question;
+use App\Models\Topic;
 
 class QuestionController extends Controller
 {
-    public function index(Question $question) {
+    public function index(Topic $topic) {
+        $question = Question::findByTopic($topic);
         return view('question.index')
                 ->with('question', $question);
     }
