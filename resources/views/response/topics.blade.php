@@ -67,7 +67,8 @@
 
     function pararSomRoleta() {
         roletaAudio.pause();
-        window.location.href = "{{ route('response.question', ['topic' => $topics->id ]) }}";
+        // enviado para a rota de resposta da pergunta apenas o id do primeiro tema
+        window.location.href = "{{ route('response.question', ['topic' => $topics->first()->id ]) }}";
     }
 </script>
     

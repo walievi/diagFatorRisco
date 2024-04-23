@@ -11,8 +11,10 @@ class ResponseController extends Controller
 {
     public function topic(Questionnaire $questionnaire)
     {
-        $topics = $questionnaire->getOpenTopics();
+        $topics = $questionnaire->topics();
+        // $topics = $questionnaire->getOpenTopics();
         $count = $topics->count();
+        // dd($count);
 
         if($count == 1){
             return redirect()
@@ -32,9 +34,6 @@ class ResponseController extends Controller
     {
         $topics = $topic->getCurrentQuestion();
         return view('response.questions')
-                ->with('question', $topics);
-    
-
-        
+                ->with('question', $topics);        
     }
 }
