@@ -25,6 +25,7 @@ class ResponseController extends Controller
                 ->route('home')
                 ->withErrors(['message' => 'Nenhum Tema cadastrado!']);
         }
+        
     }
 
     public function question(Topic $topic)
@@ -32,5 +33,8 @@ class ResponseController extends Controller
         $topics = $topic->getCurrentQuestion();
         return view('response.questions')
                 ->with('question', $topics);
+    
+
+        
     }
 }

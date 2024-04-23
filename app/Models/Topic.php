@@ -31,4 +31,9 @@ class Topic extends Model
     {
         return $this->questions()->pending()->first();
     }
+    
+    public function options(): HasMany
+    {
+        return $this->hasMany(Option::class);
+    }
 }
