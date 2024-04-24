@@ -57,3 +57,9 @@ https://zerobugs.com.br/ver-post/codigo-sql-com-todas-as-cidades-e-estados-do-br
     `<form method="POST" action="{{ route('pergunta.salvar', ['pergunta' => $pergunta->id]) }}">`
         `@csrf`
     `</form>`
+
+
+## Para usar cmd do laravel:
+
+`php artisan tinker`
+`\App\Models\Answer::first()->delete();`

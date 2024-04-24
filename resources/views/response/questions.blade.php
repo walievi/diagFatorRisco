@@ -31,7 +31,7 @@
         run(/* se não quiser usar o setData pode passar aqui dentro o valor para enviar */);
 </pre> --}}
 
-@extends('layouts.logged')
+@extends('logged')
 
 @section('page')
 <div class="container">
@@ -94,7 +94,7 @@
         e.preventDefault();
         let successCallback = (response) => {
             console.log("Resposta salva com sucesso");
-            window.location.href = response.route;
+            window.location.href = response;
         }
 
         let errorCallback = (response) => {
@@ -106,17 +106,16 @@
         }
 
         let data = {
-            option: $('input[name=vbtn-radio]:checked').val(),
-            question: {{$question->id}}
+            option_id: $('input[name=vbtn-radio]:checked').val(),
         }
 
         let ajax = new Ajax('{{ route("response.ajax.question") }}');
 
         ajax.setSuccess(successCallback)
-            .setError(errorCallback)
-            .setAny(anyCallback)
-            .setData(data)
-            .run();
+            // .setError(errorCallback)
+            // .setAny(anyCallback)
+            // .setData(data)
+            .run(data);
     });
     
 </script>

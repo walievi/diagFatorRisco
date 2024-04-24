@@ -31,6 +31,10 @@ class ResponseController extends Controller
     public function question(Topic $topic)
     {
         $question = $topic->getCurrentQuestion();
+        if ($question == null) {
+            return redirect()
+                ->route('response.topic', ['questionnaire' => $topic->questionnaire]);
+        } 
         return view('response.questions')
                 ->with('question', $question);        
     }
