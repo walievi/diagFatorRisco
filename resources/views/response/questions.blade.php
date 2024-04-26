@@ -16,9 +16,10 @@
                             <p>{{ $question->description }}</p>
                         </div>
 
-                        <!-- validar se possui imagem -->
                         <div class="centralizar"> 
-                            <img src="https://s2-g1.glbimg.com/aNpAYDaD6Q_-cciSMaHnsPWcYns=/0x0:800x450/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2022/1/A/Ob6AaqSGOqUjsuVchzSQ/harry-potter-and-the-chamber-of-secrets-photo1.jpg" class="card-img-top img-question" alt="...">
+                            @if ($question->media)
+                                <img src="{{ asset($question->media->media_path) }}" class="card-img-top img-question" alt="...">
+                            @endif
                         </div>
 
                         <!-- validar se possui vídeo e necessário copiar aquele incorporar para apresentar o vídeo -->
