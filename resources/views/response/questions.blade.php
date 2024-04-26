@@ -42,7 +42,6 @@
                 @csrf
                     <div class="card-body">
                         <div class="mb-3">
-                            {{-- AQUI utiliza primeira pergunta? --}}
                             <h4>Pergunta {{$question->order}}</h4>
                         </div>
 
@@ -59,12 +58,11 @@
                         <!-- <div class="col-lg-12">
                             <iframe width="750" height="515" src="https://www.youtube.com/embed/VPtcAtAuuQE?si=CrIX2-SdTUoxSse8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div> -->
-
                        
                         <div class="btn-group-vertical mt-5 centralizar" role="group" aria-label="Vertical radio toggle button group">
-                            @foreach ($question->options as $option)
-                                <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked value="{{$option->id}}">
-                                <label class="btn btn-outline-info mb-3" for="vbtn-radio1">{{ $option->description}}</label>
+                            @foreach ($question->options as $index => $option)
+                                <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio{{$index}}" autocomplete="off" value="{{$option->id}}">
+                                <label class="btn btn-outline-info mb-3" for="vbtn-radio{{$index}}">{{ $option->description}}</label>
                             @endforeach
                         </div>
                         
@@ -89,6 +87,7 @@
             }
         });
     });
+
 
     $("#questionForm").submit(function(e) {
         e.preventDefault();
